@@ -1,11 +1,14 @@
 <template>
   <h1>Diabetes Detect</h1>
   <nav id="buttons">
-    <router-link to="/home" id="navButton">Home</router-link>
-    <router-link to="/find" id="navButton">Find Patient With ID</router-link>
-    <router-link to="/list" id="navButton">Get All Patient</router-link>
-    <router-link to="/add" id="navButton">Add Patient</router-link>
-    <router-link to="/modify" id="navButton">Update Patient</router-link>
+      <router-link to="/home" id="navButton">Home</router-link>
+      <router-link to="/findPatient" id="navButton">Find Patient With ID</router-link>
+      <router-link to="/patientList" id="navButton">Get All Patient</router-link>
+      <router-link to="/addPatient" id="navButton">Add Patient</router-link>
+      <router-link to="/modifyPatient" id="navButton">Update Patient</router-link>
+      <router-link to="/fullHistory" id="navButton">Get Patient History</router-link>
+      <router-link to="/addToHistory" id="navButton">Add Note to Patient History</router-link>
+      <router-link to="/modifyHistory" id="navButton">Update Patient History</router-link>
   </nav>
 </template>
 
