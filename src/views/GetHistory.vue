@@ -16,7 +16,7 @@
           <tr v-for="item in info">
               <td>{{ item.id }}</td>
               <td>{{ item.patientId }}</td>
-              <td>{{ item.notes }}</td>
+              <td>{{ item.body }}</td>
           </tr>
       </table>
       <div id="errorMessage">{{ message }}</div>

@@ -15,6 +15,7 @@
             <th>Sex</th>
             <th>Address</th>
             <th>Phone</th>
+            <th>Report</th>
         </tr>
         <tr>
             <td>{{ info.patientId }}</td>
@@ -23,6 +24,10 @@
             <td>{{ info.sex }}</td>
             <td>{{ info.address }}</td>
             <td>{{ info.phone }}</td>
+            <td>
+                <p>{{ report }}</p>
+                <button @click="generateReport()">Generate</button>
+            </td>
         </tr>
     </table>
     <div id="errorMessage">{{ message }}</div>
@@ -43,7 +48,8 @@
                 id: '',
                 idCorrect: true,
                 info: {},
-                message: ''
+                message: '',
+                report: ''
             }
         },
         methods: {
@@ -55,6 +61,16 @@
                     .catch(error => {
                         console.log(error);
                         this.message = 'Erreur :(';
+                    })
+            },
+            generateReport() {
+                this.message = '';
+                axios
+                    .get('http://localhost:8081/patient/generateReport?id=' + this.id)
+                    .then(response => (this.report = response.data))
+                    .catch(error => {
+                        console.log(error);
+                        this.message = 'Erreur de génération de rapport :('
                     })
             }
         }
