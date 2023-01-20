@@ -16,7 +16,7 @@
           <tr v-for="item in info">
               <td>{{ item.id }}</td>
               <td>{{ item.patientId }}</td>
-              <td>{{ item.body }}</td>
+              <td><textarea rows="5" cols="100" wrap="off" readonly>{{ item.body }}</textarea></td>
           </tr>
       </table>
       <div id="errorMessage">{{ message }}</div>

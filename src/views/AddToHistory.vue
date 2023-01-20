@@ -4,7 +4,7 @@
     </header>
     <body>
         <input v-model="patientId" @keypress.enter="nextInput" id="newNoteInput" type="text" placeholder="Patient ID">
-        <input v-model="note" @keypress.enter="createNewNote" id="newNoteInput" type="text" placeholder="Note">
+        <textarea v-model="note" @keypress.enter="createNewNote" id="newNoteInput" rows="5" cols="100" wrap="off" placeholder="Note(s)"></textarea>
         <button @click="createNewNote">Add</button>
         <div id="errorMessage">{{ message }}</div>
     </body>
